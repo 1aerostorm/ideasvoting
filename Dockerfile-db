@@ -1,0 +1,14 @@
+FROM mysql:latest
+
+WORKDIR /db
+
+USER mysql
+
+ENV MYSQL_ROOT_PASSWORD=longyellowtail
+ENV MYSQL_USER=kitten
+ENV MYSQL_PASSWORD=longyellowtail
+ENV MYSQL_DATABASE=ideadb
+
+EXPOSE 3306
+
+CMD ["mysqld"]
