@@ -4,7 +4,7 @@ import { getIP, HttpError } from '@utils/misc';
 const MAX_VOTES = 10;
 
 export default function apiVoting(app: any, db: any) {
-  app.get('/api/ideas/:id/vote', async (req: any, res: any) => {
+  app.post('/api/ideas/:id/vote', async (req: any, res: any) => {
     const ip = getIP(req);
 
     const { id } = req.params;

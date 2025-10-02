@@ -2,22 +2,37 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
     "build": "tsc && tsc-alias",
-    "prod": "node dist/index.js"
+    "prod": "node dist/index.js",
+    "dev:client": "vite --config src/client/vite.config.ts",
+    "build:client": "vite build --config src/client/vite.config.ts",
+    "preview:client": "vite preview --config src/client/vite.config.ts"
   },
   "devDependencies": {
     "@types/config": "^3.3.5",
     "@types/express": "^5.0.3",
     "@types/node": "^24.6.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
     "@types/sequelize": "^4.28.20",
+    "@vitejs/plugin-react": "^5.0.4",
     "ts-node-dev": "^2.0.0",
     "tsc-alias": "^1.8.16",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vite": "^7.1.8"
   },
   "dependencies": {
+    "@chakra-ui/react": "^3.27.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "config": "^4.1.1",
     "express": "^5.1.0",
+    "framer-motion": "^12.23.22",
     "mysql2": "^3.15.1",
+    "next-themes": "^0.4.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-icons": "^5.5.0",
     "sequelize": "^6.37.7"
   }
 }
